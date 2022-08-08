@@ -57,11 +57,14 @@ function formatNumero(numero) {
     return numeroStr;
 }
 function mesage(arrayMensaje) {
+    //Eliminamos el mensaje por pantalla si existe alguno
+    // de otra corrida
     let p = document.getElementById("divResultado");
     if (p != null) {
         let padre = p.parentNode;
         padre.removeChild(p);
     }
+    //Evaluamos la opcion elegida de salida 
     if (document.getElementById("alert").checked) {
         let mensaje="";
         for (const iterator of arrayMensaje) {
@@ -79,12 +82,14 @@ function mesage(arrayMensaje) {
  
 
     if (document.getElementById("pantalla").checked) {
+        //Creamos un div dentro de del DIV mensajeDiv
         let divResultado = document.getElementById("mensajeDiv");
         let parent = document.createElement("div");
         parent.setAttribute("id", "divResultado");
         divResultado.appendChild(parent);
         
-        
+        //Iteramos sobre el array y creamos un elemento que añadimos
+        // al div generado (divResultado)
         for (const iterator of arrayMensaje) {
             let elemento = document.createElement("resultado");    
             elemento.setAttribute("id", "pResultado");
