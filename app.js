@@ -91,9 +91,9 @@ function mesage(arrayMensaje) {
         //Iteramos sobre el array y creamos un elemento que añadimos
         // al div generado (divResultado)
         for (const iterator of arrayMensaje) {
-            let elemento = document.createElement("resultado");    
-            elemento.setAttribute("id", "pResultado");
-            elemento.innerHTML="<h4>"+iterator+"</h4>";
+            let elemento = document.createElement("h5");    
+            elemento.setAttribute("id", "h4Resultado");
+            elemento.innerHTML=iterator;
             parent.appendChild(elemento);
         }
         
